@@ -1,0 +1,15 @@
+---
+import { name, author, description } from '../../siteConfig.json';
+
+const { title } = Astro.props;
+const pageTitle = `${name[0].toUpperCase() + name.toLowerCase().slice(1)} - ${title[0].toUpperCase() + title.toLowerCase().slice(1)}`;
+---
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<title>{pageTitle}</title>
+  <meta name="author" content={author} />
+  <meta name="description" content={description} />
+</head>
