@@ -1,0 +1,8 @@
+---
+const { pubDate } = Astro.props;
+const date = new Date(pubDate);
+const day = new Intl.DateTimeFormat('en-US', { day: '2-digit'}).format(date);
+const month = new Intl.DateTimeFormat('en-US', { month: 'long'}).format(date);
+const year = new Intl.DateTimeFormat('en-US', { year: 'numeric'}).format(date);
+---
+<span>{day} {month} {year}</span>

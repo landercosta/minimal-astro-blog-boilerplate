@@ -1,0 +1,5 @@
+---
+import DateDisplay from "./DateDisplay.astro";
+const { url, title, pubDate } = Astro.props;
+---
+<li><a href={url}>{title}</a> - <DateDisplay pubDate={pubDate} /></li>
